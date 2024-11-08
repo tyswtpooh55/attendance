@@ -1,0 +1,63 @@
+.records__heading {
+    text-align: center;
+}
+
+.records__ttl {
+    font-size: 24px;
+}
+
+.records__month {
+    font-size: 24px;
+}
+
+.month__change {
+    text-decoration: none;
+    margin: auto 10px;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.records__content {
+    text-align: center;
+}
+
+.records__table {
+    margin: 50px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.records__row:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+.records__label {
+    font-size: 20px;
+    background-color: aqua;
+}
+
+.records__sub-label {
+    font-size: 18px;
+    background-color: aquamarine;
+}
+
+.records__data {
+    font-size: 18px;
+}
+
+.records__label,
+.records__sub-label,
+.records__data {
+    padding: 5px;
+}
+
+.record__change {
+    text-decoration: none;
+    background-color: chocolate;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
