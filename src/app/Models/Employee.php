@@ -29,4 +29,9 @@ class Employee extends Model
     {
         return $this->hasManyThrough(Breaking::class, Work::class);
     }
+
+    public function PaidHolidays()
+    {
+        return $this->hasMany(PaidHoliday::class);
+    }
 }

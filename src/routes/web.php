@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\PaidHolidayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [EmployeesController::class, ('index')]);
+Route::get('/', [EmployeesController::class, ('index')])->name('index');
 Route::prefix('/employee')->name('employee.')->group(function () {
     Route::post('/stamping', [EmployeesController::class, ('attendance')])->name('attendance');
-    Route::post('/stamped/{employee_id}', [EmployeesController::class, 'clickedBtn'])->name('stamped');
+    Route::post('/stamped', [EmployeesController::class, 'clickedBtn'])->name('stamped');
     Route::get('/records/{employee_id}', [EmployeesController::class, 'records'])->name('records');
-    Route::post('/record/change/{employee_id}', [EmployeesController::class, 'changeRequest'])->name('changeRequest');
-    Route::post('/record/send-change/{employee_id}', [EmployeesController::class, 'sendChangeRequest'])->name('sendRequest');
+    Route::get('/record/change/{employee_id}', [EmployeesController::class, 'changeRequest'])->name('changeRequest');
+    Route::post('/record/confirm', [EmployeesController::class, 'confirmChangeRequest'])->name('confirmRequest');
+    Route::post('/record/submit', [EmployeesController::class, 'submitChangeRequest'])->name('submitRequest');
+    Route::get('/apply/paid-holiday/{employee_id}', [PaidHolidayController::class, 'applyPaidHoliday'])->name('applyPaidHoliday');
+    Route::post('/apply/paid-holiday', [PaidHolidayController::class, 'submitPaidHoliday'])->name('submitPaidHoliday');
 });
 

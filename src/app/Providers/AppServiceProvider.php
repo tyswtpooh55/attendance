@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('layouts.app', function ($view) {
-            $view->with('companyName', 'COMPANY NAME');
+            $view->with('companyName', config('app.company_name'));
         });
     }
 }

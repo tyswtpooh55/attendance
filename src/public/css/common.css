@@ -64,3 +64,16 @@
     border-radius: 5px;
     padding: 5px 30px;
 }
+
+
+.employee__name {
+    text-align: center;
+    font-size: 32px;
+    margin: 0px auto;
+}
+
+.error {
+    text-align: center;
+    font-size: 18px;
+    color: tomato;
+}

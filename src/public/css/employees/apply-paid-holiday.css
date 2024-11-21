@@ -1,0 +1,72 @@
+.paid-holiday__heading {
+    text-align: center;
+}
+
+.paid-holiday__ttl {
+    font-size: 24px;
+}
+
+.paid-holiday__form {
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.paid-holiday__wrap {
+    display: grid;
+    margin: 40px;
+}
+
+.paid-holiday__label {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.paid-holiday__date {
+    margin: 10px auto;
+    padding: 10px 50px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.paid-holiday__date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio__wrap {
+    margin: 5px auto;
+}
+
+.paid-holiday__type {
+    cursor: pointer;
+}
+
+.holiday-type__radio {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.paid-holiday__text {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.paid-holiday__btn {
+    padding: 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: burlywood;
+}
+
