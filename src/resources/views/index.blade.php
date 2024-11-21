@@ -21,7 +21,17 @@
                     <form action="{{ route('employee.attendance') }}" class="staff__form" method="POST">
                         @csrf
                         <input type="hidden" name="employee_id" value="{{ $employee->id }}">
-                        <button type="submit" class="staff__form--btn">{{ $employee->last_name }} {{ $employee->first_name }}</button>
+                        @php
+                            $btnClass = 'staff__form--btn';
+                            if ($employee->status === 'nowWorking') {
+                                $btnClass .= ' btn__working';
+                            } elseif ($employee->status === 'nowBreaking') {
+                                $btnClass .= ' btn__breaking';
+                            } else {
+                                $btnClass .= ' btn__off';
+                            }
+                        @endphp
+                        <button type="submit" class="{{ $btnClass }}">{{ $employee->last_name }} {{ $employee->first_name }}</button>
                     </form>
                 </li>
             @endforeach

@@ -33,6 +33,14 @@
     background-color: antiquewhite;
 }
 
+.records__row.holiday-row {
+    color: tomato;
+}
+
+.records__row.today-row {
+    background-color: blue;
+}
+
 .records__label {
     font-size: 20px;
     background-color: aqua;
@@ -53,11 +61,26 @@
     padding: 5px;
 }
 
+.records__data:first-child {
+    font-weight: bold;
+}
+
+.records__data {
+    border-right: 1px solid #F0E68C;
+}
+
+.records__data:last-child {
+    border-right: none;
+    width: 15%;
+}
+
 .record__change {
     text-decoration: none;
     background-color: chocolate;
     color: #fff;
     font-size: 14px;
     padding: 5px 10px;
+    border: none;
     border-radius: 3px;
+    cursor: pointer;
 }

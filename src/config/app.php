@@ -232,4 +232,6 @@ return [
 
     ],
 
+    'company_name' => env('COMPANY_NAME', 'Default Company Name'),
+
 ];
